@@ -1,0 +1,39 @@
+#main-wrapper-container{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	transition: display 1s;
+/*	background-color: #f3e8e5;*/
+	justify-content: space-evenly;
+}
+
+#list-main-wrapper{
+	width: 75%;
+	gap: 35px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: scroll;
+	transition: display 1s;
+	justify-content: space-evenly;
+	padding: 15px 0px 0px 15px;
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ #list-main-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#list-main-wrapper{
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+#cart-main-wrapper{
+	width: 25%;
+	height: 100%;
+	display: static;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	/* border: 1px solid black;	 */
+}

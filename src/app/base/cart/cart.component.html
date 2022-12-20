@@ -1,0 +1,38 @@
+<div id="heading">
+	<h2> Your cart </h2>
+</div>
+
+<div id="items" #items>
+
+	<ng-container *ngFor="let item of products">
+		<div class="cart-item" >
+			<div class="prod-image">
+				<img src={{item.src}}>
+			</div>
+			<div class="prod-details">
+				<div class="prod-name">
+					<h4> {{item.name}} </h4>
+				</div>
+				<div class="prod-price">
+					<h4> {{item.price}} </h4>
+				</div>
+			</div>
+			<div class="quantity" data-quantity="1" >
+				<div class="minus" (click)="decreaseQuantity(item.name)" > <h1>-</h1> </div>
+				<h4 #quantity > {{item.quantity}} </h4>
+				<div class="plus" (click)="increaseQuantity(item.name)" > <h1>+</h1> </div>
+			</div>
+			<button (click)="removeItem(item.name)" class="remove-prod">
+				Remove from cart
+			</button>
+		</div>
+	</ng-container>
+
+</div>
+
+<div id="buttons">
+	<button id="clear-cart" (click)="clearElements()" >
+		<i class="fa-solid fa-trash"></i>
+		Clear cart
+	</button>
+</div>

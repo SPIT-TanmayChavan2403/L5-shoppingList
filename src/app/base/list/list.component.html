@@ -1,0 +1,22 @@
+<div  class="list" *ngFor="let product of products" >
+	<div class="prod-image">
+		<img src={{product.imageSrc}}>
+	</div>
+	<div class="prod-details">
+		<div class="prod-name">
+			<h4>{{product.name}}</h4>
+		</div>
+		<div class="prod-price">
+			<h4>$ {{product.price}} /- </h4>
+		</div>
+	</div>
+	<div (click)="sendToCart($event)"
+		[attr.data-name]="product.name"
+		[attr.data-price]="product.price"
+		[attr.data-src]="product.imageSrc"
+		[attr.data-quantity]="product.quantity"
+		class="add-to-cart-button">
+
+		<h3>Add to cart</h3>
+	</div>
+</div>
